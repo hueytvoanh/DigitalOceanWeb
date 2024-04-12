@@ -60,4 +60,6 @@ systemctl start emperor.uwsgi.service
 sudo systemctl enable grafana-server
 netstat -lptn
 
+To access from anywhre 
 sudo ufw allow 3000
+IP:3000

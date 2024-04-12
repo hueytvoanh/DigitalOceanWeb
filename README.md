@@ -39,7 +39,15 @@ systemctl start emperor.uwsgi.service
  sudo systemctl start influxdb
  apt install influxdb-client
  influx
+
+ sudo systemctl restart influxdb
+ influx -username admin -password 159381
+ CREATE DATABASE sensors
  
  
  Grafana
- 
+ https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-18-04
+ [snap install grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
+
+ sudo systemctl start grafana-server
+sudo systemctl enable grafana-server

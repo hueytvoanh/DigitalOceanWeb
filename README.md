@@ -46,6 +46,7 @@ systemctl start emperor.uwsgi.service
  
  
  Grafana
+ sudo rm -i /etc/apt/sources.list.d/grafana.list
  https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-18-04
  [snap install grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
 

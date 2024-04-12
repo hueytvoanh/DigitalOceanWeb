@@ -46,9 +46,15 @@ systemctl start emperor.uwsgi.service
  
  
  Grafana
+ rm -rf /etc/apt/sources.list.d/*grafana
+ 
  sudo rm -i /etc/apt/sources.list.d/grafana.list
- https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-18-04
- [snap install grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
+ /etc/apt/sources.list.d/archive_uri-https_packages_grafana_com_oss_deb-mantic.list:1 
+ /etc/apt/sources.list.d/grafana.list
+ https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-22-04
+ 
+ ###https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-18-04
+ ###[snap install grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
 
  sudo systemctl start grafana-server
 sudo systemctl enable grafana-server

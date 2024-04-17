@@ -1,0 +1,1857 @@
+[
+    {
+        "id": "c4f322011ba3f9e0",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e121e4d1c68e880f",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c6d5b97d53aff99c",
+        "type": "mqtt-broker",
+        "name": "MQTT BROKER",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ba20d9e8555cac4c",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "sensors",
+        "name": "Influx_I1",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "f76c8797.584da8",
+        "type": "ui_tab",
+        "name": "GPS Tracker",
+        "icon": "gps_fixed",
+        "order": 21
+    },
+    {
+        "id": "7a832387.7a6c6c",
+        "type": "ui_group",
+        "name": "Map",
+        "tab": "f76c8797.584da8",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "a082d5ab.8a1268",
+        "type": "ui_group",
+        "name": "History",
+        "tab": "f76c8797.584da8",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8930f03.56e081",
+        "type": "ui_group",
+        "name": "Speed, Altitude, Accuracy chart",
+        "tab": "f76c8797.584da8",
+        "order": 4,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "7cc9c15c.f49b6",
+        "type": "ui_group",
+        "name": "Tracks",
+        "tab": "f76c8797.584da8",
+        "order": 5,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "3bdf3d0e.e69262",
+        "type": "sqlitedb",
+        "db": "/home/sunny_elec/iot.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "a1a60a5d16a400eb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d8e290ea574085eb",
+        "type": "sqlitedb",
+        "db": "/home/sunny_elec/gps_toan",
+        "mode": "RWC"
+    },
+    {
+        "id": "198020620e3d6056",
+        "type": "sqlitedb",
+        "db": "/home/sunny_elec/gps_data.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "8f0952be.200eb",
+        "type": "sqlitedb",
+        "db": "test.sqlite"
+    },
+    {
+        "id": "9d0b3c5b.08beb",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": "1"
+    },
+    {
+        "id": "8121855.018af78",
+        "type": "websocket-listener",
+        "path": "/ws/worldmap",
+        "wholemsg": "false"
+    },
+    {
+        "id": "cd3dc6e749165963",
+        "type": "mqtt in",
+        "z": "c4f322011ba3f9e0",
+        "name": "MQTT_Power_I1",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c6d5b97d53aff99c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "6ba78159fb8cd2c6",
+                "7ebf81089e21491c",
+                "cffd93485515501c",
+                "68ef53a27a3dd10c",
+                "ddebe8f8ac323687",
+                "503f05ad893d47cc",
+                "f480da921f1e7bf5",
+                "0252899b17d31c36",
+                "51d82ea6e183b5ec"
+            ]
+        ]
+    },
+    {
+        "id": "95a87b521ddd7bbd",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug I1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "aecaddfb582b7c79",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "I1_Data",
+        "measurement": "sensors/i1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "e3a78dfbb9306ab1",
+        "type": "mqtt in",
+        "z": "c4f322011ba3f9e0",
+        "name": "Temp1",
+        "topic": "sensors/temp1/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c6d5b97d53aff99c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 590,
+        "y": 580,
+        "wires": [
+            [
+                "0707b97ac1bbb78b",
+                "3a946d43a4947103"
+            ]
+        ]
+    },
+    {
+        "id": "0707b97ac1bbb78b",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug Temp1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3a946d43a4947103",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "Temp1",
+        "measurement": "sensors/temp1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 830,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "7010bc825dee1af1",
+        "type": "mqtt in",
+        "z": "c4f322011ba3f9e0",
+        "name": "Hum1",
+        "topic": "sensors/hum1/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c6d5b97d53aff99c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 590,
+        "y": 760,
+        "wires": [
+            [
+                "fc8910eee2e32260",
+                "160dbf0b0093b617"
+            ]
+        ]
+    },
+    {
+        "id": "fc8910eee2e32260",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug Hum1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "160dbf0b0093b617",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "Hum1",
+        "measurement": "sensors/hum1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "6ba78159fb8cd2c6",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 1 I1",
+        "func": "var output = msg.payload.split(\",\");\n\nvar i1 = parseFloat(output[0]);\n\nvar msg1 = { payload: i1 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 20,
+        "wires": [
+            [
+                "aecaddfb582b7c79",
+                "95a87b521ddd7bbd",
+                "a186e31dec501f4d"
+            ]
+        ]
+    },
+    {
+        "id": "7ebf81089e21491c",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 2 I2",
+        "func": "var output = msg.payload.split(\",\");\n\nvar i2 = parseFloat(output[1]);\n\nvar msg1 = { payload: i2 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "0435540152c05015",
+                "90df06baf7d66157"
+            ]
+        ]
+    },
+    {
+        "id": "0435540152c05015",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug I2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cffd93485515501c",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 3 I3",
+        "func": "var output = msg.payload.split(\",\");\n\nvar i3 = parseFloat(output[2]);\n\nvar msg1 = { payload: i3 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "d3ae4ed755821d3c",
+                "18f0219643ba63c4"
+            ]
+        ]
+    },
+    {
+        "id": "68ef53a27a3dd10c",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 4 V1",
+        "func": "var output = msg.payload.split(\",\");\n\nvar v1 = parseFloat(output[3]);\n\nvar msg1 = { payload: v1 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [
+                "685ce5a660759a58",
+                "97dece27035ab463"
+            ]
+        ]
+    },
+    {
+        "id": "ddebe8f8ac323687",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 5 V2",
+        "func": "var output = msg.payload.split(\",\");\n\nvar v2 = parseFloat(output[4]);\n\nvar msg1 = { payload: v2 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "06a01fdefc763329",
+                "c78c7e44d5a89751"
+            ]
+        ]
+    },
+    {
+        "id": "503f05ad893d47cc",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 6 V3",
+        "func": "var output = msg.payload.split(\",\");\n\nvar v3 = parseFloat(output[5]);\n\nvar msg1 = { payload: v3 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 320,
+        "wires": [
+            [
+                "d8114050c8b15aa8",
+                "d5bea7dfe6c94ed4"
+            ]
+        ]
+    },
+    {
+        "id": "d3ae4ed755821d3c",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug I3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "685ce5a660759a58",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug V1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "06a01fdefc763329",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug V2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d8114050c8b15aa8",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug V3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "90df06baf7d66157",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "I2_Data",
+        "measurement": "sensors/i2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "18f0219643ba63c4",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "I3_Data",
+        "measurement": "sensors/i3",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "97dece27035ab463",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "V1_Data",
+        "measurement": "sensors/v1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c78c7e44d5a89751",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "V2_Data",
+        "measurement": "sensors/v2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d5bea7dfe6c94ed4",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "V3_Data",
+        "measurement": "sensors/v3",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f480da921f1e7bf5",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 1 P1",
+        "func": "var output = msg.payload.split(\",\");\n\nvar i1 = parseFloat(output[0]);\n\nvar v1 = parseFloat(output[3]);\n\nvar p1 = i1*v1;\n\nvar msg1 = { payload: p1 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "81747eb92817dd60",
+                "c7cce518525b0989"
+            ]
+        ]
+    },
+    {
+        "id": "81747eb92817dd60",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "P1_Data",
+        "measurement": "sensors/p1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c7cce518525b0989",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug P1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0252899b17d31c36",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 1 P2",
+        "func": "var output = msg.payload.split(\",\");\n\nvar i2 = parseFloat(output[1]);\n\nvar v2 = parseFloat(output[4]);\n\nvar p2 = i2*v2;\n\nvar msg1 = { payload: p2 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "11a55124b17b1c48",
+                "5ed09457eed6718a"
+            ]
+        ]
+    },
+    {
+        "id": "11a55124b17b1c48",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "P2_Data",
+        "measurement": "sensors/p2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5ed09457eed6718a",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug P2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "51d82ea6e183b5ec",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "function 1 P2",
+        "func": "var output = msg.payload.split(\",\");\n\nvar i3 = parseFloat(output[2]);\n\nvar v3 = parseFloat(output[5]);\n\nvar p3 = i3*v3;\n\nvar msg1 = { payload: p3 };\n\nreturn msg1",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "65ff732bb113c7b9",
+                "8522f3e694d36672"
+            ]
+        ]
+    },
+    {
+        "id": "65ff732bb113c7b9",
+        "type": "influxdb out",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "P3_Data",
+        "measurement": "sensors/p3",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "8522f3e694d36672",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug P3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "fc400dcf64f2439f",
+        "type": "sqlite",
+        "z": "c4f322011ba3f9e0",
+        "mydb": "3bdf3d0e.e69262",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Web_IOT",
+        "x": 1420,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20e60eb5fbc810aa",
+        "type": "function",
+        "z": "c4f322011ba3f9e0",
+        "name": "add data to IOT.db",
+        "func": "var date = new Date();\nvar timestamp = date.getTime();\ntimestamp = timestamp + (3600 * 1000);\n\nmsg.topic = \"INSERT INTO ats VALUES (NULL, \\\"ATS1\\\", 0.5, 48.3, 1.7, 48.9, \\\"admin\\\", datetime(\\\"now\\\"))\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 100,
+        "wires": [
+            [
+                "fc400dcf64f2439f",
+                "25964b8deffc8d42"
+            ]
+        ]
+    },
+    {
+        "id": "25964b8deffc8d42",
+        "type": "debug",
+        "z": "c4f322011ba3f9e0",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a186e31dec501f4d",
+        "type": "influxdb in",
+        "z": "c4f322011ba3f9e0",
+        "influxdb": "ba20d9e8555cac4c",
+        "name": "",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 280,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "557e54735f7a9688",
+        "type": "comment",
+        "z": "e121e4d1c68e880f",
+        "name": "Set new POI",
+        "info": "",
+        "x": 810,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "0c48058fc4c6aada",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Check map event",
+        "func": "var newobject = {};\n\nif (msg.payload.action===\"point\") {\n    newobject = { lat:msg.payload.lat, lon:msg.payload.lon, name:msg.payload.point, radius:500 };\n    msg.payload = newobject;\n    return msg;    \n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "631b00f74e7c3395",
+        "type": "inject",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 156.25,
+        "y": 87.5,
+        "wires": [
+            [
+                "12798876a09eb05f"
+            ]
+        ]
+    },
+    {
+        "id": "12798876a09eb05f",
+        "type": "template",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<iframe src=\"/worldmap\" height=\"600px\" width=\"1000px\" style=\"border: none;\"></iframe>",
+        "x": 356.25,
+        "y": 87.5,
+        "wires": [
+            [
+                "ae827657e5ad76f9"
+            ]
+        ]
+    },
+    {
+        "id": "c9d842aa5b45678a",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "SQL",
+        "func": "// This will handle any device and any attribute as long as it is in the DB\nvar p_30d  = 1000*60*60*24*30 ; //30 Days\nvar p_7d  = 1000*60*60*24*7 ; //7 Days\nvar p_1d   =  1000*60*60*24 ; // 1 Day\nvar d = new Date();\nvar current = d.getTime();\nvar today0h = d.setHours(0,0,0,0);\nvar day = d.getDay();\nvar monday0h = today0h - (day + (day === 0 ? -6:1)) * p_1d;\nvar fromdate = 0;\nvar enddate = 0;\n\nswitch(msg.topic) {\n    case \"period\":\n        switch(msg.payload) {\n            case \"today\":\n                fromdate = today0h;\n                enddate = today0h+p_1d;\n                break;\n            case \"yesterday\":\n                fromdate = today0h-p_1d;\n                enddate = today0h;\n                break;\n            case \"thisweek\":\n                fromdate = monday0h;\n                enddate = monday0h+p_7d;\n                break;\n            case \"lastweek\":\n                fromdate = monday0h-p_7d;\n                enddate = monday0h;\n                break;\n            case \"last24h\":\n                fromdate = current-p_1d;\n                enddate = current;\n                break;\n            case \"last7d\":\n                fromdate = current-p_7d;\n                enddate = current;\n                break;\n            case \"last30d\":\n                fromdate = current-p_30d;\n                enddate = current;\n                break;\n        }\n        context.set(\"fromdate\",fromdate);\n        context.set(\"enddate\",enddate);\n        break;\n    case \"date\":\n        fromdate = msg.payload;\n        enddate = msg.payload+1000*60*60*24;\n        context.set(\"fromdate\",fromdate);\n        context.set(\"enddate\",enddate);        \n        break;\n    case \"markers\":\n        context.set(\"markers\",msg.payload);\n        break;\n    case \"user\":\n        context.set(\"user\",msg.payload);\n        break;\n    case \"refresh\":\n        fromdate = context.get(\"fromdate\");\n        enddate = context.get(\"enddate\");\n        if ((fromdate===undefined) || (enddate===undefined)) {\n            return [null,{\"topic\": \"Loading data\", \"payload\": \"Period needs to be selected first\"}];;\n        }\n\n        //let user = context.get(\"user\");\n        let user = 'R16';\n        if (user===undefined) {\n            return [null,{\"topic\": \"Loading data\", \"payload\": \"User needs to be selected first\"}];;\n        }\n\n        msg.topic = \"SELECT * FROM gps WHERE deviceid='\"+user+\"' AND time >= \" + fromdate + \" AND time <= \" + enddate + \" ORDER BY time\";\n        //msg.wifi = \"SELECT * FROM wifi WHERE deviceid='\"+user+\"' AND time >= \" + fromdate + \" AND time <= \" + enddate + \" ORDER BY time\";\n        node.status({fill:\"blue\",shape:\"ring\",text:\"Range: \"+fromdate+\"-\"+enddate});  \n        let markers = context.get(\"markers\");\n        if (markers!==undefined) {\n            msg.markers = markers;\n        }\n        return [msg,{\"topic\": \"Loading data\", \"payload\": \"Please wait, updating views...\"}];\n        break;\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 376.25,
+        "y": 267.5,
+        "wires": [
+            [
+                "02da18c1789d3a3d",
+                "6bae02175f314f61"
+            ],
+            [
+                "223d8b5be70cccdc"
+            ]
+        ]
+    },
+    {
+        "id": "487e7e9017240f81",
+        "type": "comment",
+        "z": "e121e4d1c68e880f",
+        "name": "Generate map update from stored data",
+        "info": "",
+        "x": 179.10714721679688,
+        "y": 220.357177734375,
+        "wires": []
+    },
+    {
+        "id": "8ab6e93430a92226",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Generate map routes (single track)",
+        "func": "var output = [];\nlet count = 0;\nlet lastMarker = 0;\n\nnode.status({fill:\"blue\",shape:\"ring\",text:\"Record count: \"+msg.payload.length});    \n\nif (msg.payload.length>0) {\n    \n    output.push({ \"topic\": \"map\", \"payload\": {\"command\":{\"clear\":\"GPS Track\"}}})\n\n    output.push({ \"topic\": \"map\", \"payload\": {\"name\": msg.payload[0].deviceid, \"layer\": \"GPS Track\", \"line\": [], \"command\": {lat: msg.payload[0].latitude, lon: msg.payload[0].longitude}}});\n    \n    for (var i=0; i<msg.payload.length; i++) {\n        output[1].payload.line.push([msg.payload[i].latitude,msg.payload[i].longitude]);\n        count++;\n        if (msg.markers>0) {\n            if (msg.payload[i].time - lastMarker > msg.markers) {\n                lastMarker = msg.payload[i].time;\n                \n                let now = new Date();\n                now.setTime(msg.payload[i].time);\n                let yyyy = now.getFullYear();\n                let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n                let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n                let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n                let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n                let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n                // msg.payload[i].formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss ;    \n                \n                \n                output.push({\"topic\": \"map\", \"payload\": { \"name\":hh + \":\" + mmm + \":\" + ss, \"layer\": \"GPS Track\", \"lat\":msg.payload[i].latitude, \"lon\":msg.payload[i].longitude }});\n            }\n        }\n    }\n    \n    //msg.payload = output[0];\n    //return msg;\n    \n    if (output.length>0) {\n        return [output];\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 906.25,
+        "y": 267.5,
+        "wires": [
+            [
+                "6dea3156de66735f",
+                "2929d972254c8540"
+            ]
+        ]
+    },
+    {
+        "id": "af4fc4a59c08859a",
+        "type": "inject",
+        "z": "e121e4d1c68e880f",
+        "name": "Today",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "period",
+        "payload": "today",
+        "payloadType": "str",
+        "x": 156.25,
+        "y": 367.5,
+        "wires": [
+            [
+                "c9d842aa5b45678a"
+            ]
+        ]
+    },
+    {
+        "id": "a7d5b73bcd2d916c",
+        "type": "template",
+        "z": "e121e4d1c68e880f",
+        "name": "Format",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<table>\n    <tr><th>Device ID</th><th>Latitude [deg]</th><th>Longtitude [deg]</th><th>Altitude [m]</th><th>Speed [km/h]</th><th>Accuracy</th><th>Time</th></tr>\n    {{#payload}}\n        <tr class=\"\">\n            <td>{{deviceid}}</td>\n            <td>{{latitude}}</td>\n            <td>{{longitude}}</td>\n            <td>{{altitude}}</td>\n            <td>{{speed}}</td>\n            <td>{{accuracy}}</td>\n            <td>{{formatteddate}}</td>\n        </tr>\n    {{/payload}}\n</table>\n",
+        "output": "str",
+        "x": 1026.25,
+        "y": 327.5,
+        "wires": [
+            [
+                "6a6009e9de9a8575"
+            ]
+        ]
+    },
+    {
+        "id": "2f94ec57a72f3b69",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Convert dates",
+        "func": "for (var i=0; i<msg.payload.length; i++) {\n    \n    // format the unix timestamp to dd.mm.yyyy hh:mm:ss format\n    var now = new Date();\n    now.setTime(msg.payload[i].time);\n    var yyyy = now.getFullYear();\n    var mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    var dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    var hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    var mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    var ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    msg.payload[i].formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss ;    \n    \n    // Recude decimal places\n    msg.payload[i].latitude = parseFloat(msg.payload[i].latitude.toFixed(8));\n    msg.payload[i].longitude = parseFloat(msg.payload[i].longitude.toFixed(8));\n    msg.payload[i].altitude = parseFloat(msg.payload[i].altitude.toFixed(1));\n    msg.payload[i].speed = parseFloat(msg.payload[i].speed.toFixed(1));\n\n\n}    \n    \n    \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 846.25,
+        "y": 327.5,
+        "wires": [
+            [
+                "a7d5b73bcd2d916c"
+            ]
+        ]
+    },
+    {
+        "id": "0c2b5ef31e4a9b4f",
+        "type": "comment",
+        "z": "e121e4d1c68e880f",
+        "name": "Mqtt Data Input",
+        "info": "",
+        "x": 126.25,
+        "y": 687.5,
+        "wires": []
+    },
+    {
+        "id": "52a7c48d94c2dd7f",
+        "type": "debug",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "7a0c6f8e19f51338",
+        "type": "delay",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "50",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 780,
+        "wires": [
+            [
+                "2ed841c3eb1e8cba"
+            ]
+        ]
+    },
+    {
+        "id": "6bae02175f314f61",
+        "type": "debug",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "topic",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 586.25,
+        "y": 207.5,
+        "wires": []
+    },
+    {
+        "id": "80c952f08d8eee67",
+        "type": "comment",
+        "z": "e121e4d1c68e880f",
+        "name": "Embed the map to the dashboard",
+        "info": "",
+        "x": 156.25,
+        "y": 27.5,
+        "wires": []
+    },
+    {
+        "id": "7598b1289b0a96e9",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Chart",
+        "func": "var chart = [{\n    \"series\":[\"Altitude [m]\",\"Speed [km/h]\",\"Accuracy\"],\n    \"data\":[[],[],[]],\n    \"labels\":[\"\"]\n}];\n\nfor (var i=0; i<msg.payload.length; i++) {\n    chart[0].data[0].push({\"x\": msg.payload[i].time, \"y\": msg.payload[i].altitude});\n    chart[0].data[1].push({\"x\": msg.payload[i].time, \"y\": msg.payload[i].speed*3.6});\n    chart[0].data[2].push({\"x\": msg.payload[i].time, \"y\": msg.payload[i].accuracy});\n}\n\nmsg.payload = chart;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 816.25,
+        "y": 407.5,
+        "wires": [
+            [
+                "a6df1b27e152b3e5"
+            ]
+        ]
+    },
+    {
+        "id": "428eea71974722d8",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Store data to later processing",
+        "func": "for (var i=0; i<msg.payload.length; i++) {\n    \n    // format the unix timestamp to dd.mm.yyyy hh:mm:ss format\n    var now = new Date();\n    now.setTime(msg.payload[i].time);\n    var yyyy = now.getFullYear();\n    var mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    var dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    var hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    var mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    var ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    msg.payload[i].formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss ;   \n    msg.payload[i].type=\"gps\";\n}    \nflow.set(\"gpstrack\", msg.payload);    \n    \n// Get the wifi table selection logic so we can merge that with the GPS data    \nmsg.topic = msg.wifi;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 520,
+        "wires": [
+            [
+                "7ae3c927fae29583"
+            ]
+        ]
+    },
+    {
+        "id": "4c3b432135b9f70d",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Merge wifi data with gps tracks",
+        "func": "let gpstrack = flow.get(\"gpstrack\"); \nif (gpstrack===undefined) {\n    return;\n}\nif (gpstrack.length===0) {\n    return;\n}\nlet j = 0;\nfor (let i=0;i<msg.payload.length;i++) {\n    while ((j<gpstrack.length) && (gpstrack[j].time<msg.payload[i].time)) {\n        j++;\n    }\n    // format the unix timestamp to dd.mm.yyyy hh:mm:ss format\n    var now = new Date();\n    now.setTime(msg.payload[i].time);\n    var yyyy = now.getFullYear();\n    var mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    var dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    var hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    var mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    var ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    msg.payload[i].formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss ;   \n    gpstrack.splice(j,0, {\"type\": \"wifi\", \"deviceid\": msg.payload[i].deviceid, \"connected\": msg.payload[i].connected, \"ssid\": msg.payload[i].ssid, \"time\": msg.payload[i].time, \"formatteddate\": msg.payload[i].formatteddate})\n}\nflow.set(\"gpstrack\", gpstrack );\nmsg.payload = gpstrack;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1376.25,
+        "y": 467.5,
+        "wires": [
+            [
+                "63e2555110d3db36"
+            ]
+        ]
+    },
+    {
+        "id": "63e2555110d3db36",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Route Analytics",
+        "func": "function GPSdistance(lat1, lon1, lat2, lon2, unit) {\n    if ((lat1 == lat2) && (lon1 == lon2)) {\n        return 0;\n    }\n    else {\n        var radlat1 = Math.PI * lat1/180;\n        var radlat2 = Math.PI * lat2/180;\n        var theta = lon1-lon2;\n        var radtheta = Math.PI * theta/180;\n        var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);\n        if (dist > 1) {\n            dist = 1;\n        }\n        dist = Math.acos(dist);\n        dist = dist * 180/Math.PI;\n        dist = dist * 60 * 1.1515;\n        if (unit==\"K\") { dist = dist * 1.609344 }\n        if (unit==\"N\") { dist = dist * 0.8684 }\n        return dist;\n    }\n}\n\nfunction hslToHex(h, s, l) {\n  h /= 360;\n  s /= 100;\n  l /= 100;\n  let r, g, b;\n  if (s === 0) {\n    r = g = b = l; // achromatic\n  } else {\n    const hue2rgb = (p, q, t) => {\n      if (t < 0) t += 1;\n      if (t > 1) t -= 1;\n      if (t < 1 / 6) return p + (q - p) * 6 * t;\n      if (t < 1 / 2) return q;\n      if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;\n      return p;\n    };\n    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;\n    const p = 2 * l - q;\n    r = hue2rgb(p, q, h + 1 / 3);\n    g = hue2rgb(p, q, h);\n    b = hue2rgb(p, q, h - 1 / 3);\n  }\n  const toHex = x => {\n    const hex = Math.round(x * 255).toString(16);\n    return hex.length === 1 ? '0' + hex : hex;\n  };\n  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;\n}\n\nlet gpstrack = flow.get(\"gpstrack\"); \nif (gpstrack===undefined) {\n    return;\n}\nif (gpstrack.length===0) {\n    return;\n}\n\nlet tracks = [];\nlet mode = 0;  // look for a start of a new track\nlet distance = 0.0;\nlet count = 0;\nlet speed = 0.0;\n\nfor (let i=0;i<gpstrack.length;i++) {\n    \n    // look for the start of a new track\n    if ((mode===0) && (gpstrack[i].type===\"wifi\") && (gpstrack[i].connected===0)) {\n        tracks.push({ \"start\": gpstrack[i].time, \"startdatetime\": gpstrack[i].formatteddate, \"startssid\": gpstrack[i].ssid, \"gpsdata\": []});\n        distance = 0.0;\n        count = 0;\n        speed = 0.0;\n        mode = 1; // track started\n    } else {\n    \n        // track started, this is the first GPS data\n        if ((mode===1) && (gpstrack[i].type===\"gps\") && (count===0)) {\n            count++;\n            speed+=gpstrack[i].speed;\n            tracks[tracks.length-1].gpsdata.push(gpstrack[i]);\n        } else {\n\n            // track started, this is a subsequent GPS data\n            if ((mode===1) && (gpstrack[i].type===\"gps\") && (count>0)) {\n                count++;\n                speed+=gpstrack[i].speed;\n                distance+=GPSdistance(gpstrack[i-1].latitude, gpstrack[i-1].longitude, gpstrack[i].latitude, gpstrack[i].longitude, \"K\");\n                tracks[tracks.length-1].gpsdata.push(gpstrack[i]);\n            }  else {\n    \n                // found end of track\n                if ((mode===1) && (gpstrack[i].type===\"wifi\") && (gpstrack[i].connected===1)) {\n                    speed = speed / count;\n                    tracks[tracks.length-1].count = count;\n                    tracks[tracks.length-1].speed = (speed*3.6).toFixed(2);  // convert to km/h\n                    tracks[tracks.length-1].distance = distance.toFixed(3); // in km\n                    tracks[tracks.length-1].count = count;\n                    tracks[tracks.length-1].end = gpstrack[i].time;\n                    tracks[tracks.length-1].enddatetime = gpstrack[i].formatteddate;\n                    tracks[tracks.length-1].endssid = gpstrack[i].ssid;\n                    tracks[tracks.length-1].duration = ((tracks[tracks.length-1].end-tracks[tracks.length-1].start)/1000/60).toFixed(0);\n                    mode = 0; // track ended\n                }\n            }\n        }\n    }\n}\n\n// add name and colors to the tracks\nfor (i=0;i<tracks.length;i++) {\n    tracks[i].color = hslToHex(Math.round(i*360/tracks.length), 100, 50);\n    tracks[i].name = \"Track \"+(i+1);\n}\n\n\nflow.set(\"tracks\", tracks);\nmsg.payload = tracks;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1656.25,
+        "y": 547.5,
+        "wires": [
+            [
+                "3c8a786cce51eda8",
+                "79b98bd6c025d86c"
+            ]
+        ]
+    },
+    {
+        "id": "f4431e311fd4e5cd",
+        "type": "inject",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1396.25,
+        "y": 547.5,
+        "wires": [
+            [
+                "63e2555110d3db36"
+            ]
+        ]
+    },
+    {
+        "id": "3c8a786cce51eda8",
+        "type": "template",
+        "z": "e121e4d1c68e880f",
+        "name": "Format",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<table>\n    <tr><th>Track</th><th>Start Time</th><th>Start Wifi</th><th>Average speed</th><th>Distance</th><th>GPS positions</th><th>Duration</th><th>End Time</th><th>End Wifi</th></tr>\n    {{#payload}}\n        <tr class=\"\">\n            <td><span style=\"color:{{color}};\">{{name}}</span></td>\n            <td>{{startdatetime}}</td>\n            <td>{{startssid}}</td>\n            <td>{{speed}}</td>\n            <td>{{distance}}</td>\n            <td>{{count}}</td>\n            <td>{{duration}}</td>\n            <td>{{enddatetime}}</td>\n            <td>{{endssid}}</td>\n        </tr>\n    {{/payload}}\n</table>\n<p>Average Speed in km/h, Distance in meters, Duration in minutes</p>\n",
+        "output": "str",
+        "x": 1866.25,
+        "y": 547.5,
+        "wires": [
+            [
+                "5c37b1f745ea8f8e"
+            ]
+        ]
+    },
+    {
+        "id": "79b98bd6c025d86c",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "Generate map routes (separate track)",
+        "func": "var output = [];\nlet count = 0;\nlet lastMarker = 0;\nlet currentrackid = 0;\n\n\n// Generate a list of messages to delete tracks from a previous\nfor (let i=0;i<1000;i++) {\n    output.push({ \"topic\": \"map\", \"payload\": {\"command\":{\"clear\":\"Track \"+i}}});    \n}\n\nif (msg.payload.length>0) {\n    \n    \n    for (var i=0; i<msg.payload.length; i++) {\n        output.push({ \"topic\": \"map\", \"payload\": {\"name\": msg.payload[i].name, \"layer\": msg.payload[i].name, \"color\": msg.payload[i].color, \"line\": [], \"command\": {lat: msg.payload[i].gpsdata[0].latitude, lon: msg.payload[i].gpsdata[0].longitude}}});\n        lastMarker = 0;\n        currentrackid = output.length-1;\n        for (let j=1; j<msg.payload[i].gpsdata.length; j++) {\n            output[currentrackid].payload.line.push([msg.payload[i].gpsdata[j].latitude, msg.payload[i].gpsdata[j].longitude]);\n            count++;\n            if (msg.markers>0) {\n                if (msg.payload[i].gpsdata[j].time - lastMarker > msg.markers) {\n                    lastMarker = msg.payload[i].gpsdata[j].time;\n                    \n                    let now = new Date();\n                    now.setTime(msg.payload[i].gpsdata[j].time);\n                    let yyyy = now.getFullYear();\n                    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n                    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n                    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n                    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n                    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n                    // msg.payload[i].formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss ;    \n                    \n                    \n                    output.push({\"topic\": \"map\", \"payload\": { \"name\":hh + \":\" + mmm + \":\" + ss, \"layer\": msg.payload[i].name, \"color\": msg.payload[i].color, \"lat\":msg.payload[i].gpsdata[j].latitude, \"lon\":msg.payload[i].gpsdata[j].longitude }});\n                }\n            }\n        }\n    }\n    \n    //msg.payload = output[0];\n    //return msg;\n    \n    if (output.length>0) {\n        node.status({fill:\"blue\",shape:\"ring\",text:\"Tracks: \"+msg.payload.length+\", GPS data: \"+count});    \n\n        return [output];\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1836.25,
+        "y": 407.5,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b086bb2f6d22b73d",
+        "type": "comment",
+        "z": "e121e4d1c68e880f",
+        "d": true,
+        "name": "DB Table creation SQL",
+        "info": "CREATE TABLE 'gps' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'deviceid' TEXT, 'longitude' REAL, 'latitude' REAL, 'accuracy' REAL, 'altitude' REAL, 'speed' REAL, 'time' INTEGER)\n\nCREATE TABLE 'wifi' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'deviceid' TEXT, 'connected' BOOLEAN, 'ssid' TEXT,'time' INTEGER)",
+        "x": 116.25,
+        "y": 147.5,
+        "wires": []
+    },
+    {
+        "id": "2929d972254c8540",
+        "type": "worldmap",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "true",
+        "hiderightclick": "false",
+        "coords": "none",
+        "path": "",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1390,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "47e03e3b870cb8af",
+        "type": "worldmap in",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "path": "",
+        "events": "",
+        "x": 1920,
+        "y": 240,
+        "wires": [
+            [
+                "0c48058fc4c6aada"
+            ]
+        ]
+    },
+    {
+        "id": "cb2357e6b9c94ff9",
+        "type": "ui_button",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "group": "a082d5ab.8a1268",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "refresh",
+        "topicType": "str",
+        "x": 146.25,
+        "y": 447.5,
+        "wires": [
+            [
+                "c9d842aa5b45678a"
+            ]
+        ]
+    },
+    {
+        "id": "2463f8993158287f",
+        "type": "ui_dropdown",
+        "z": "e121e4d1c68e880f",
+        "name": "Period",
+        "label": "Period",
+        "tooltip": "",
+        "place": "",
+        "group": "a082d5ab.8a1268",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Today",
+                "value": "today",
+                "type": "str"
+            },
+            {
+                "label": "Yesterday",
+                "value": "yesterday",
+                "type": "str"
+            },
+            {
+                "label": "This week",
+                "value": "thisweek",
+                "type": "str"
+            },
+            {
+                "label": "Last week",
+                "value": "lastweek",
+                "type": "str"
+            },
+            {
+                "label": "Last 24 hours",
+                "value": "last24h",
+                "type": "str"
+            },
+            {
+                "label": "Last 7 days",
+                "value": "last7d",
+                "type": "str"
+            },
+            {
+                "label": "Last 30 days",
+                "value": "last30d",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "period",
+        "x": 136.25,
+        "y": 267.5,
+        "wires": [
+            [
+                "c9d842aa5b45678a"
+            ]
+        ]
+    },
+    {
+        "id": "93a0f14784c3f512",
+        "type": "ui_dropdown",
+        "z": "e121e4d1c68e880f",
+        "name": "Markers",
+        "label": "Markers:",
+        "tooltip": "",
+        "place": "Place markers",
+        "group": "a082d5ab.8a1268",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "None",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "Every 5 minutes",
+                "value": "300000",
+                "type": "str"
+            },
+            {
+                "label": "Every 10 minutes",
+                "value": "600000",
+                "type": "str"
+            },
+            {
+                "label": "Every 30 minutes",
+                "value": "1800000",
+                "type": "str"
+            },
+            {
+                "label": "Every hour",
+                "value": "3600000",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "markers",
+        "topicType": "str",
+        "className": "",
+        "x": 146.25,
+        "y": 407.5,
+        "wires": [
+            [
+                "c9d842aa5b45678a"
+            ]
+        ]
+    },
+    {
+        "id": "034727fe408bceb2",
+        "type": "ui_dropdown",
+        "z": "e121e4d1c68e880f",
+        "name": "User",
+        "label": "User",
+        "tooltip": "Select user",
+        "place": "Select user",
+        "group": "a082d5ab.8a1268",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Test user",
+                "value": "R16",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "user",
+        "topicType": "str",
+        "className": "",
+        "x": 156.25,
+        "y": 487.5,
+        "wires": [
+            [
+                "c9d842aa5b45678a"
+            ]
+        ]
+    },
+    {
+        "id": "456ae2118d03c209",
+        "type": "ui_date_picker",
+        "z": "e121e4d1c68e880f",
+        "name": "Manual date",
+        "label": "Pick a date",
+        "group": "a082d5ab.8a1268",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "date",
+        "x": 146.25,
+        "y": 327.5,
+        "wires": [
+            [
+                "c9d842aa5b45678a"
+            ]
+        ]
+    },
+    {
+        "id": "a6df1b27e152b3e5",
+        "type": "ui_chart",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "group": "8930f03.56e081",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 1016.25,
+        "y": 407.5,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae827657e5ad76f9",
+        "type": "ui_template",
+        "z": "e121e4d1c68e880f",
+        "group": "7a832387.7a6c6c",
+        "name": "",
+        "order": 0,
+        "width": "20",
+        "height": "12",
+        "format": "<div ng-bind-html=\"msg.payload | trusted\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 526.25,
+        "y": 87.5,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a6009e9de9a8575",
+        "type": "ui_template",
+        "z": "e121e4d1c68e880f",
+        "group": "7a832387.7a6c6c",
+        "name": "GPS Data",
+        "order": 0,
+        "width": "20",
+        "height": "6",
+        "format": "<div ng-bind-html=\"msg.payload\" height=\"600\" style=\"height: 300px;\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1186.25,
+        "y": 327.5,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c37b1f745ea8f8e",
+        "type": "ui_template",
+        "z": "e121e4d1c68e880f",
+        "group": "7cc9c15c.f49b6",
+        "name": "GPS Data",
+        "order": 0,
+        "width": "20",
+        "height": "6",
+        "format": "<div ng-bind-html=\"msg.payload\" height=\"300\" style=\"height: 300px;\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 2066.25,
+        "y": 547.5,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "223d8b5be70cccdc",
+        "type": "ui_toast",
+        "z": "e121e4d1c68e880f",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 566.25,
+        "y": 347.5,
+        "wires": []
+    },
+    {
+        "id": "02da18c1789d3a3d",
+        "type": "sqlite",
+        "z": "e121e4d1c68e880f",
+        "mydb": "3bdf3d0e.e69262",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Database",
+        "x": 626.25,
+        "y": 267.5,
+        "wires": [
+            [
+                "8ab6e93430a92226",
+                "2f94ec57a72f3b69",
+                "7598b1289b0a96e9",
+                "428eea71974722d8"
+            ]
+        ]
+    },
+    {
+        "id": "2ed841c3eb1e8cba",
+        "type": "sqlite",
+        "z": "e121e4d1c68e880f",
+        "mydb": "198020620e3d6056",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Database",
+        "x": 660,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ae3c927fae29583",
+        "type": "sqlite",
+        "z": "e121e4d1c68e880f",
+        "mydb": "3bdf3d0e.e69262",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Database",
+        "x": 1126.25,
+        "y": 467.5,
+        "wires": [
+            [
+                "4c3b432135b9f70d"
+            ]
+        ]
+    },
+    {
+        "id": "4029f2f44b448b11",
+        "type": "mqtt in",
+        "z": "e121e4d1c68e880f",
+        "name": "MQTT_Power_I1",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c6d5b97d53aff99c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "de25f6a9e8cff3a4",
+                "75d968eae7e79fd5",
+                "9fc9c53cfa317179"
+            ]
+        ]
+    },
+    {
+        "id": "75d968eae7e79fd5",
+        "type": "debug",
+        "z": "e121e4d1c68e880f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "de25f6a9e8cff3a4",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "WriteGps",
+        "func": "let deviceid = 'R16';\n\nlet myssid = context.get(\"ssid\");\nif (myssid === undefined) {\n    myssid = \"\";\n}\n\nlet sql = \"\";\nlet d = new Date();\nlet epoch = d.getTime();\n\nvar output_mqtt = msg.payload.split(\",\");\n\nvar longTitude = parseFloat(output_mqtt[0]);\nvar latTitude = parseFloat(output_mqtt[1]);\nvar accuracy = parseFloat(output_mqtt[2]);\nvar aTitude = parseFloat(output_mqtt[3]);\nvar speed = parseFloat(output_mqtt[4]);\n\nlatTitude = 10.777335;\nlongTitude = 106.662664;\naccuracy = 8;\naTitude = 120.7;\nspeed = 30.5;\n\n\n//let output = [];\n\n//output.push({\"topic\": \"INSERT INTO gps (deviceid,longitude,latitude,accuracy,altitude,speed,time)\" + \"VALUES ('\" + deviceid + \"',\" + longTitude + \",\" + latTitude + \",\" + accuracy + \",\" + aTitude + \",\" + speed + \",\" + msg.payload.Locations[i].Time + \")\", \"payload\": \"\"});\n\n//for (let i = 0; i < 5; i++) {\n//    output.push({\n//        \"topic\": \"INSERT INTO gps (deviceid,longitude,latitude,accuracy,altitude,speed,time) \" +\n//            \"VALUES ('\" + deviceid + \"',\" + longTitude + \",\" + latTitude + \",\" + accuracy + \",\" + aTitude + \",\" + speed + \",\" + msg.payload.Locations[i].Time + \")\", \"payload\": \"\"\n//    });\n//}\n\n\n//return [output];\n\n//var newMsg;\n\nvar newMsg = {\n    //\"topic\": \"INSERT INTO gps VALUES(\" + 22 + \",\" + 33 + \",\" + longTitude + \",\" + latTitude + \",\" + accuracy + \",\" + aTitude + \",\" + speed + \",\" + epoch + \")\"\n    \"topic\": \"INSERT INTO gps (deviceid,longitude,latitude,accuracy,altitude,speed,time) \" +\n        \"VALUES ('\" + deviceid + \"',\" + longTitude + \",\" + latTitude + \",\" + accuracy + \",\" + aTitude + \",\" + speed + \",\" + epoch + \")\"\n}\n\n//var newMsg = {\n//    \"topic\": \"INSERT INTO test VALUES(\"+ 22 +\",\"+ 33 + \")\"\n//}\n\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 760,
+        "wires": [
+            [
+                "7a0c6f8e19f51338",
+                "52a7c48d94c2dd7f"
+            ]
+        ]
+    },
+    {
+        "id": "6dea3156de66735f",
+        "type": "debug",
+        "z": "e121e4d1c68e880f",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9fc9c53cfa317179",
+        "type": "function",
+        "z": "e121e4d1c68e880f",
+        "name": "TestMap",
+        "func": "//var LatValue = 106.662664;\n//var LonValue = 10.777335;\n\nvar LonValue = 106.662664;\nvar LatValue = 10.777335;\n\nmsg.payload = {\"name\":\"Home\", \"lat\":LatValue, \"lon\": LonValue};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 309.1999816894531,
+        "y": 887.7999877929688,
+        "wires": [
+            []
+        ]
+    }
+]

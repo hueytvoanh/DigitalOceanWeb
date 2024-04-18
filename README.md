@@ -10,6 +10,8 @@ DELETE-RESTART
 
 4. Install Node RED
 https://randomnerdtutorials.com/access-node-red-dashboard-anywhere-digital-ocean/
+Install Palette
+     node-red-contrib-influxdb
 
 Create PYTHON environment 
 

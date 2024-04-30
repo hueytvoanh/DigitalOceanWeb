@@ -65,3 +65,8 @@ netstat -lptn
 To access from anywhre 
 sudo ufw allow 3000
 IP:3000
+
+
+>>> from project import app, db
+>>> app.app_context().push()
+>>> db.create_all()

@@ -77,4 +77,7 @@ sqlite3 acu_ats.db
 create table temperatures (rDatetime datetime, sensorID text, userID, temp numeric);
 insert into temperatures values (datetime(CURRENT_TIMESTAMP),"1", "admin", 25.7);
 
+
+SELECT * FROM temperatures WHERE sensorID=1 AND userID="admin" AND (rDatetime BETWEEN '2024-05-01 00:00' AND '2024-05-01 14:21);
+
 %s/\t/  /g

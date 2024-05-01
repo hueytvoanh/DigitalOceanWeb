@@ -75,3 +75,4 @@ IP:3000
 DATABASE
 sqlite3 acu_ats.db
 create table temperatures (rDatetime datetime, sensorID text, userID, temp numeric);
+insert into temperatures values (datetime(CURRENT_TIMESTAMP),"1", "admin", 25.7);

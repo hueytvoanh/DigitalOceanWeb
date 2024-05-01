@@ -70,3 +70,8 @@ IP:3000
 >>> from project import app, db
 >>> app.app_context().push()
 >>> db.create_all()
+
+
+DATABASE
+sqlite3 acu_ats.db
+create table temperatures (rDatetime datetime, sensorID text, userID, temp numeric);

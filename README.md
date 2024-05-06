@@ -6,6 +6,7 @@ nano /etc/nginx/sites-available/sunnyiot.org
 
 DELETE-RESTART
      nginx -t
+     systemctl restart emperor.uwsgi.service
      systemctl restart nginx
 
 4. Install Node RED

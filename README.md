@@ -94,3 +94,4 @@ create table voltages (rDatetime datetime, sensorID nummeric, voltage numeric, u
 insert into temperatures values (datetime(CURRENT_TIMESTAMP), 1, 25.7, "admin");
 select * from currents;
 select * from voltages;
+select * from tempratures;

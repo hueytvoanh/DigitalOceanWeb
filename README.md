@@ -88,4 +88,9 @@ SELECT * FROM temperatures WHERE rDatetime BETWEEN date('2024-05-01') AND date('
 
 sqlite3 acu_ats_2.db
 create table temperatures (rDatetime datetime, sensorID nummeric, temp numeric, userID text);
+create table currents (rDatetime datetime, sensorID nummeric, current numeric, userID text);
+create table voltages (rDatetime datetime, sensorID nummeric, voltage numeric, userID text);
+
 insert into temperatures values (datetime(CURRENT_TIMESTAMP), 1, 25.7, "admin");
+select * from currents;
+select * from voltages;

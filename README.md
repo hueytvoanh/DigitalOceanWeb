@@ -92,6 +92,12 @@ create table temperatures (rDatetime datetime, sensorID nummeric, temp numeric, 
 create table currents (rDatetime datetime, sensorID nummeric, current numeric, userID text);
 create table voltages (rDatetime datetime, sensorID nummeric, voltage numeric, userID text);
 
+
+DATE
+date
+timedatectl set-timezone Asia/Ho_Chi_Minh
+
+
 insert into temperatures values (datetime(CURRENT_TIMESTAMP), 1, 25.7, "admin");
 select * from currents;
 select * from voltages;

@@ -76,7 +76,9 @@ USER DATABASE
     sqlite3 database.db
     .tables
     select * from user;
-    insert into user values (NULL, "ats1", "159123");
+    insert into user values (NULL, "ats1", "159123");    
+    insert into user values (NULL, "ats2", "15912345");      
+    insert into user values (NULL, "ats3", "15912355");
 
 DATABASE
 sqlite3 acu_ats.db

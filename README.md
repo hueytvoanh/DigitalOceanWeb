@@ -72,6 +72,11 @@ IP:3000
 >>> app.app_context().push()
 >>> db.create_all()
 
+USER DATABASE
+    sqlite3 database.db
+    .tables
+    select * from user;
+    insert into user values (NULL, "ats1", "159123");
 
 DATABASE
 sqlite3 acu_ats.db

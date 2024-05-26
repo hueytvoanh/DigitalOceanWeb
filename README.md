@@ -10,6 +10,10 @@ Set Up firewall
     sudo ufw enable
     sudo ufw allow 'Nginx HTTP'
     sudo ufw allow 22
+    sudo ufw allow 80
+    sudo ufw allow 443
+    sudo ufw allow 1883
+    sudo ufw allow 9001
 
     Check nginx work 192.168.1.7
 
@@ -56,6 +60,27 @@ server_names_hash_bucket_size 64;
 
 
 #SET UP DUCKDNS
+sudo mkdir duckdns
+cd ~/duckdns/
+sudo nano duckdns.sh 
+echo url="https://www.duckdns.org/update?domains=sunnyiot&token=0fcfb91c-e7c8-4bf7-9d2d-551c3cfa0f50&ip=" | curl -k -o ~/duckdns/duck.log -K -
+sudo chmod 700 duckdns.sh
+sudo crontab -e
+     */5 * * * * ~/duckdns/duckdns.sh >/dev/null 2>&1
+
+sudo chmod 777 ./duckdns.sh
+sudo chmod 777 ~/duckdns/*     
+
+sudo apt install certbot python3-certbot-nginx
+sudo nano /etc/nginx/sites-available/sunnyiot.duckdns.org
+
+sudo ufw allow 'Nginx Full'
+sudo ufw delete allow 'Nginx HTTP'
+
+OBTAIN SSL
+sudo certbot --nginx -d sunnyiot.duckdns.org -d www.sunnyiot.duckdns.org
+Get cert files in: /etc/letencrypt/live/sunnyiot.duckdns.org/
+
 
 Load DATA 
 rm -rf /var/log/nginx/*

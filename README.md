@@ -1,5 +1,15 @@
 # DigitalOceanWeb
 
+#Install Nginx
+    sudo apt update
+    sudo apt install nginx
+
+Set Up firewall
+    sudo apt-get install ufw
+    sudo ufw app list
+    sudo ufw enable
+    sudo ufw allow 'Nginx HTTP'
+    
 Load DATA 
 rm -rf /var/log/nginx/*
 nano /etc/nginx/sites-available/sunnyiot.org

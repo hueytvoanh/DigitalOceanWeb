@@ -9,7 +9,54 @@ Set Up firewall
     sudo ufw app list
     sudo ufw enable
     sudo ufw allow 'Nginx HTTP'
-    
+    sudo ufw allow 22
+
+    Check nginx work 192.168.1.7
+
+HTML-NGINX
+    sudo mkdir -p /var/www/sunnyiot.duckdns.org/html
+    sudo chown -R $USER:$USER /var/www/sunnyiot.duckdns.org/html
+    sudo chmod -R 755 /var/www/sunnyiot.duckdns.org
+    sudo nano /var/www/sunnyiot.duckdns.org/html/index.html
+---------------------------------------------------------------------------------------------------------------------------
+    <html>
+    <head>
+        <title>Welcome to your_domain!</title>
+    </head>
+    <body>
+        <h1>Success!  The your_domain server block is working!</h1>
+    </body>
+    </html>
+---------------------------------------------------------------------------------------------------------------------------
+
+sudo nano /etc/nginx/sites-available/sunnyiot.duckdns.org
+
+--------------------------------------------------------------------------------------------------------------------------
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/sunnyiot.duckdns.org/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name sunnyiot.duckdns.org www.sunnyiot.duckdns.org;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+
+sudo ln -s /etc/nginx/sites-available/sunnyiot.duckdns.org /etc/nginx/sites-enabled/
+
+sudo nano /etc/nginx/nginx.conf
+
+server_names_hash_bucket_size 64;
+
+
+#SET UP DUCKDNS
+
 Load DATA 
 rm -rf /var/log/nginx/*
 nano /etc/nginx/sites-available/sunnyiot.org

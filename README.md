@@ -88,6 +88,51 @@ CHECKING DOMAIN NAME IS WORKING
 https://sunnyiot.duckdns.org/
 Success! The your_domain server block is working!
 
+SET UP APP
+sudo nano /etc/dphys-swapfile
+change configurationnumber to 1024
+
+ $ sudo apt-get update
+ $ sudo apt-get upgrade
+ $ sudo apt-get install build-essential
+ $ sudo apt-get install libncurses5-dev libncursesw5-dev libreadline6-dev libffi-dev
+ $ sudo apt-get install libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libsqlite3-dev libgdbm-dev libssl-dev openssl
+ $ sudo apt-get install libboost-python-dev
+ $ sudo apt-get install libpulse-dev
+ $ sudo apt-get install python-dev
+ #### $ sudo apt-get install python-dev-is-python3
+ $ sudo apt-get install vim
+
+ $ cd ~
+ $ mkdir python-source
+ $ cd python-source/
+ $ wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz
+ $ tar zxvf Python-3.8.2.tgz
+ $ cd Python-3.8.2/
+ $ ./configure --prefix=/usr/local/opt/python-3.8.2
+ $ make
+ $ sudo make install
+ $ /usr/local/opt/python-3.8.2/bin/python3.8 --version
+
+ $ sudo su
+ # mkdir /var/www
+ # mkdir /var/www/lab_app/
+ # cd /var/www/lab_app/
+ # /usr/local/opt/python-3.8.2/bin/python3.8 -m venv .
+ # . bin/activate
+ 
+ (lab_app) root@raspberrypi-zero:/var/www/lab_app# pip install flask
+ nano hello.py
+
+ ------------------------------------------------------------------------------
+  from flask import Flask
+ app = Flask(__name__)
+ @app.route("/")
+ def hello():
+    return "Hello World!"
+ if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)
+--------------------------------------------------------------------------------
 
 
 Load DATA 

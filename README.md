@@ -120,7 +120,9 @@ change configurationnumber to 1024
  # cd /var/www/lab_app/
  # /usr/local/opt/python-3.8.2/bin/python3.8 -m venv .
  # . bin/activate
- 
+
+
+ https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04
  (lab_app) root@raspberrypi-zero:/var/www/lab_app# pip install flask
  nano hello.py
 
@@ -139,6 +141,33 @@ python hello.py
 http://192.168.1.7:5000/              =============> Hello
 
 (lab_app) root@raspberrypi-zero:/var/www/lab_app# pip install uwsgi
+
+nano lab_app_uwsgi.ini
+----------------------------------------------------------------------------------
+[uwsgi]
+#application's base folder
+base = /var/www/lab_app
+#python module to import
+app = lab_app_v9
+module = %(app)
+home = %(base)
+pythonpath = %(base)
+#socket file's location
+socket = /var/www/lab_app/%n.sock
+#permissions for the socket file
+chmod-socket = 666
+#the variable that holds a flask
+#application inside the module
+#imported at line #6
+callable = app
+#location of log files
+logto = /var/log/uwsgi/%n.log
+----------------------------------------------------------------------------------------
+
+
+
+
+
 
 Load DATA 
 rm -rf /var/log/nginx/*

@@ -164,8 +164,29 @@ callable = app
 logto = /var/log/uwsgi/%n.log
 ----------------------------------------------------------------------------------------
 
+cd /etc/systemd/system/
+nano emperor.uwsgi.service
+-----------------------------------------------------------------------------------------
+Unit]
+Description=uWSGI Emperor
+After=syslog.target
 
+[Service]
+ExecStart=/var/www/lab_app/bin/uwsgi --ini /var/www/lab_app/lab_app_uwsgi.ini
+# Requires systemd version 211 or newer
+RuntimeDirectory=uwsgi
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+[Install]
+WantedBy=multi-user.target
+-------------------------------------------------------------------------------------------
 
+systemctl start emperor.uwsgi.service
+systemctl status emperor.uwsgi.service
+systemctl enable emperor.uwsgi.service
 
 
 

@@ -131,9 +131,14 @@ change configurationnumber to 1024
  def hello():
     return "Hello World!"
  if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=5000)
 --------------------------------------------------------------------------------
+(lab_app) sudo ufw allow 5000
+CHECK FLASK WORK 
+python hello.py
+http://192.168.1.7:5000/              =============> Hello
 
+(lab_app) root@raspberrypi-zero:/var/www/lab_app# pip install uwsgi
 
 Load DATA 
 rm -rf /var/log/nginx/*

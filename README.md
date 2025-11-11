@@ -78,15 +78,15 @@ server_names_hash_bucket_size 64;
   sudo ufw delete allow 'Nginx HTTP' 
 
 # OBTAIN SSL 
-sudo certbot --nginx -d sunnyiot.duckdns.org -d www.sunnyiot.duckdns.org
-Get cert files in: /etc/letencrypt/live/sunnyiot.duckdns.org/ 
+    sudo certbot --nginx -d sunnyiot.duckdns.org -d www.sunnyiot.duckdns.org
+    Get cert files in: /etc/letencrypt/live/sunnyiot.duckdns.org/ 
 
-sudo systemctl status certbot.timer 
-sudo certbot renew --dry-run 
+    sudo systemctl status certbot.timer 
+    sudo certbot renew --dry-run 
 
-CHECKING DOMAIN NAME IS WORKING 
-https://sunnyiot.duckdns.org/ 
-Success! The your_domain server block is working! 
+    CHECKING DOMAIN NAME IS WORKING 
+    https://sunnyiot.duckdns.org/ 
+    Success! The your_domain server block is working! 
 
 # SET UP APP
 sudo nano /etc/dphys-swapfile 

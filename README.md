@@ -1,21 +1,21 @@
 # DigitalOceanWeb
 
 # Install Nginx
-    sudo apt update \n
-    sudo apt install nginx \n
+    sudo apt update 
+    sudo apt install nginx 
 
 # Set Up firewall
-    sudo apt-get install ufw \n
-    sudo ufw app list \n
-    sudo ufw enable \n
-    sudo ufw allow 'Nginx HTTP' \n
-    sudo ufw allow 22 \n
-    sudo ufw allow 80 \n
-    sudo ufw allow 443 \n
-    sudo ufw allow 1883 \n
-    sudo ufw allow 9001 \n
+    sudo apt-get install ufw 
+    sudo ufw app list 
+    sudo ufw enable 
+    sudo ufw allow 'Nginx HTTP' 
+    sudo ufw allow 22 
+    sudo ufw allow 80 
+    sudo ufw allow 443 
+    sudo ufw allow 1883 
+    sudo ufw allow 9001 
 
-    Check nginx work 192.168.1.7 \n
+    Check nginx work 192.168.1.7 
 
 # HTML-NGINX
     sudo mkdir -p /var/www/sunnyiot.duckdns.org/html \n

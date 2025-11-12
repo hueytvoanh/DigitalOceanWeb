@@ -12,7 +12,8 @@
     sudo ufw allow 22 
     sudo ufw allow 80 
     sudo ufw allow 443 
-    sudo ufw allow 1883 
+    sudo ufw allow 1883
+    sudo ufw allow 8883
     sudo ufw allow 9001 
 
     Check nginx work 192.168.1.7 
@@ -87,7 +88,29 @@ server_names_hash_bucket_size 64;
     CHECKING DOMAIN NAME IS WORKING 
     https://sunnyiot.duckdns.org/ 
     Success! The your_domain server block is working! 
+# MQTT
+    sudo apt-get install mosquitto mosquitto-clients
+    Login Creation
+    sudo mosquitto_passwd -c /etc/mosquitto/passwd sunnyelec
+    sudo nano /etc/mosquitto/conf.d/default.conf
+    sudo systemctl restart mosquitto
 
+    sudo nano /etc/mosquitto/conf.d/default.conf
+    listener 1883 localhost
+
+    listener 8883
+    certfile /etc/letsencrypt/live/sunnyiot.duckdns.org/cert.pem
+    cafile /etc/letsencrypt/live/sunnyiot.duckdns.org/chain.pem
+    keyfile /etc/letsencrypt/live/sunnyiot.duckdns.org/privkey.pem
+
+    listener 8083
+    protocol websockets
+    certfile /etc/letsencrypt/live/mqtt.example.com/cert.pem
+    cafile /etc/letsencrypt/live/mqtt.example.com/chain.pem
+    keyfile /etc/letsencrypt/live/mqtt.example.com/privkey.pem
+
+    sudo systemctl restart mosquitto
+    
 # SET UP APP
 sudo nano /etc/dphys-swapfile 
 change configurationnumber to 1024 

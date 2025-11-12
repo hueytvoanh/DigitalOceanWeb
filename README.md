@@ -95,19 +95,23 @@ server_names_hash_bucket_size 64;
     sudo nano /etc/mosquitto/conf.d/default.conf
     sudo systemctl restart mosquitto
 
+    Should copy *.pem file from /etc/letencrypt to /etc/mosquitto
+
     sudo nano /etc/mosquitto/conf.d/default.conf
     listener 1883 localhost
 
     listener 8883
-    certfile /etc/letsencrypt/live/sunnyiot.duckdns.org/cert.pem
-    cafile /etc/letsencrypt/live/sunnyiot.duckdns.org/chain.pem
-    keyfile /etc/letsencrypt/live/sunnyiot.duckdns.org/privkey.pem
+    certfile /etc/mosquitto/certs/cert.pem
+    cafile /etc/mosquitto/certs/chain.pem
+    keyfile /etc/mosquitto/certs/privkey.pem
 
     listener 8083
     protocol websockets
-    certfile /etc/letsencrypt/live/mqtt.example.com/cert.pem
-    cafile /etc/letsencrypt/live/mqtt.example.com/chain.pem
-    keyfile /etc/letsencrypt/live/mqtt.example.com/privkey.pem
+    certfile /etc/mosquitto/certs/cert.pem
+    cafile /etc/mosquitto/certs/chain.pem
+    keyfile /etc/mosquitto/certs/privkey.pem
+
+    mosquitto -c /etc/mosquitto/conf.d/default.conf -v
 
     sudo systemctl restart mosquitto
     

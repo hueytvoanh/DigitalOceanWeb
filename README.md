@@ -92,6 +92,8 @@ server_names_hash_bucket_size 64;
     sudo apt-get install mosquitto mosquitto-clients
     Login Creation
     sudo mosquitto_passwd -c /etc/mosquitto/passwd sunnyelec
+    sudo chmod 755 /etc/mosquitto/passwd
+    
     sudo nano /etc/mosquitto/conf.d/default.conf
     sudo systemctl restart mosquitto
 

@@ -261,6 +261,8 @@ nano /etc/nginx/sites-available/sunnyiot.org
 
        [Install]
        WantedBy=multi-user.target
+
+    sudo systemctl enable nodered.service
        
 Install Palette 
      node-red-contrib-influxdb 

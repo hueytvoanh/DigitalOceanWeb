@@ -229,7 +229,12 @@ nano /etc/nginx/sites-available/sunnyiot.org
      systemctl restart nginx
 
 # 4. Install Node RED
-https://randomnerdtutorials.com/access-node-red-dashboard-anywhere-digital-ocean/ 
+    https://randomnerdtutorials.com/access-node-red-dashboard-anywhere-digital-ocean/ 
+    sudo apt update && sudo apt upgrade -y
+    sudo apt install npm -y
+    sudo npm install -g --unsafe-perm node-red
+    sudo ufw allow 1880
+    node-red start
 Install Palette 
      node-red-contrib-influxdb 
 

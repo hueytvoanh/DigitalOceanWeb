@@ -235,6 +235,33 @@ nano /etc/nginx/sites-available/sunnyiot.org
     sudo npm install -g --unsafe-perm node-red
     sudo ufw allow 1880
     node-red start
+    sudo nano /etc/systemd/system/nodered.service
+        [Unit]
+        Description=Node-RED
+        After=syslog.target network.target
+
+        [Service]
+        ExecStart=/usr/local/bin/node-red --max-old-space-size=128 -v
+        Restart=on-failure
+        KillSignal=SIGINT
+
+        # log output to syslog as 'node-red'
+        SyslogIdentifier=node-red
+        StandardOutput=syslog
+
+        # non-root user to run as
+        #WorkingDirectory=/home/rui/
+        #User=rui
+        #Group=rui
+
+        # if using a root user
+        WorkingDirectory=/root/
+        User=root
+        Group=root
+
+       [Install]
+       WantedBy=multi-user.target
+       
 Install Palette 
      node-red-contrib-influxdb 
 

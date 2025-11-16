@@ -280,6 +280,7 @@ nano /etc/nginx/sites-available/sunnyiot.org
         Port Forwarding in your Router for accessing ......:1880
         sudo systemctl status nodered 
         Set up User/ Pass ... node-red admin init 
+        123 . 1 .. 
         sudo reboot
        
 Install Palette 

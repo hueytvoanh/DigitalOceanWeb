@@ -278,6 +278,8 @@ nano /etc/nginx/sites-available/sunnyiot.org
         node-red-start
         sudo systemctl enable nodered.service
         Port Forwarding in your Router for accessing ......:1880
+        sudo systemctl status nodered 
+        Set up User/ Pass ... node-red admin init 
         sudo reboot
        
 Install Palette 

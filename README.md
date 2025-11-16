@@ -277,6 +277,7 @@ nano /etc/nginx/sites-available/sunnyiot.org
         bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
         node-red-start
         sudo systemctl enable nodered.service
+        Port Forwarding in your Router for accessing ......:1880
         sudo reboot
        
 Install Palette 

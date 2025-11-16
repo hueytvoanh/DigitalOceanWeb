@@ -263,6 +263,14 @@ nano /etc/nginx/sites-available/sunnyiot.org
        WantedBy=multi-user.target
 
     sudo systemctl enable nodered.service
+
+    Pi Set Up
+        sudo apt update && sudo apt upgrade
+        sudo apt install build-essential git curl
+        bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+        node-red-start
+        sudo systemctl enable nodered.service
+        sudo reboot
        
 Install Palette 
      node-red-contrib-influxdb 

@@ -9,13 +9,20 @@
     sudo ufw app list 
     sudo ufw enable 
     sudo ufw allow 'Nginx HTTP' 
+    sudo ufw allow 'Nginx Full' 
     sudo ufw allow 22 
     sudo ufw allow 80 
     sudo ufw allow 443 
     sudo ufw allow 1883
     sudo ufw allow 8883
+    sudo ufw allow 8083 
     sudo ufw allow 9001 
+    sudo ufw allow 1880    
+    sudo ufw allow 3000
+    sudo ufw allow 5000
 
+    sudo ufw show added 
+    
     Check nginx work 192.168.1.7 
 
 # HTML-NGINX
